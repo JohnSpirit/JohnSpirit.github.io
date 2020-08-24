@@ -1,16 +1,11 @@
-<!doctype html>
-<html class="no-js">
-<head>
-<meta charset="utf-8">
-<title>mainpage</title>
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-<body>
-
-<h1>Hello world! This is John Spirit's First Page.</h1>
-<img src="assets/mikoto.jpg" alt="mikoto">
-
-</body>
-</html>
+---
+　　layout: default
+　　title: 我的Blog
+---
+　　<h2>{{ page.title }}</h2>
+　　<p>最新文章</p>
+　　<ul>
+　　　　{% for post in site.posts %}
+　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+　　　　{% endfor %}
+　　</ul>
