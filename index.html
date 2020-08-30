@@ -1,11 +1,75 @@
 ---
 　　layout: default
-　　title: Ja Spirit的Blog
+　　title: Ja Spirit's Blog
 ---
+	<style type="text/css">
+		body
+		{
+			background-image: url(/assets/images/index/index.jpg);
+			background-repeat:no-repeat;
+			background-size: 100%;
+		}
+		div
+		{
+			display: block;
+			text-align: center;
+			font-size: 80px;
+			color: white;
+			padding-bottom: 250px;
+		}
+		li
+		{
+			border: 1px solid;
+			border-color: grey;
+			border-radius: 16px;
+			padding: 20px;
+			background-color: #00FFFF;
+			width: 600px;		
+		}
+		p.post
+		{
+			display: block;
+			font-size: 40px;
+			padding-left: 2%;
+
+		}
+		p.copyright
+		{
+			font-size: 14px;
+		    text-align: center;
+		    margin-bottom: 0;
+		    display: block;
+		}
+		a.posturl:link,a.posturl:visited
+		{
+		    /*display:block;*/
+		    font-weight:bold;
+		    color:#FFFFFF;
+		    background-color:#98bf21;
+		    width:300px;
+		    text-align:center;
+		    padding:4px;
+		    text-decoration:none;
+		}
+		a.posturl:hover,a.posturl:active
+		{
+		    background-color:#7A991A;
+		}
+	</style>
 　　<h2>{{ page.title }}</h2>
-　　<p>Ja Spirit的Blog</p>
+	<div>
+		<p class="title">Ja Spirit's Blog</p>
+	</div>
+　　
+	<p class="post">My posts</p>
 　　<ul>
 　　　　{% for post in site.posts %}
-　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+　　　　　　<li>{{ post.date | date_to_string }} <a class="posturl" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 　　　　{% endfor %}
 　　</ul>
+
+	<p class="copyright">
+	    Copyright © Jaspirit Blog 2020
+	    <br>
+	    Powered by <a href="http://www.jaspirit.tk">Jaspirit Blog</a>
+	</p>
