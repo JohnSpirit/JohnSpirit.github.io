@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blocked
 title: 两岸统一态度调研
 ---
 ---
